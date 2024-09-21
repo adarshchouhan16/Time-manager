@@ -1,0 +1,327 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-task-button {
+  background-color: #04675F;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 60px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-task-button:hover {
+  background-color: #03504e;
+}
+
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-filter input {
+  width: 60%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #04675F;
+  color: white;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Task Card Styles */
+.task-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.task-card.completed-task {
+  background-color: #e0ffe0;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.task-title-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-title-date input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.task-title-date h3 {
+  margin: 0;
+}
+
+.task-title-date h3.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.due-date {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.task-priority-expand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.priority {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  color: white;
+}
+
+.priority.high {
+  background-color: #ff4d4d;
+}
+
+.priority.medium {
+  background-color: #ffa64d;
+}
+
+.priority.low {
+  background-color: #4da6ff;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.expand-button:hover {
+  color: #04675F;
+}
+
+.task-details {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.task-details p {
+  margin: 0 0 10px 0;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #04675F;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.task-actions button:hover {
+  background-color: #03504e;
+}
+
+/* Form Styles */
+.add-task-form,
+.edit-task-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.add-task-form h2,
+.edit-task-form h2 {
+  margin-top: 0;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.date-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-buttons button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #04675F;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.form-buttons button:hover {
+  background-color: #03504e;
+}
+
+.form-buttons button:nth-child(2) {
+  background-color: #888;
+}
+
+.form-buttons button:nth-child(2):hover {
+  background-color: #666;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+.App.dark .container {
+  background-color: #2c2c2c;
+}
+
+.task-card.dark {
+  background-color: #555;
+}
+
+.task-card.completed-task.dark {
+  background-color: #4d704d;
+}
+
+.task-header.dark {
+  background-color: #3a3a3a;
+}
+
+.add-task-form.dark,
+.edit-task-form.dark {
+  background-color: #3a3a3a;
+}
+
+.filter-button.dark,
+.filter-button.active.dark {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+.priority.high.dark {
+  background-color: darkred;
+}
+
+.priority.medium.dark {
+  background-color: darkorange;
+}
+
+.priority.low.dark {
+  background-color: darkgreen;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .search-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-filter input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .filter-buttons {
+    justify-content: space-between;
+  }
+}
